@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8">
+
+    <!-- Page Title-->
+    <title>Peer Share - Screen Record</title>
+
+    <!-- Meta Tags-->
+    <meta name="description" content="PeerShare - Secure Screen Record">
+    <meta name="keywords" content="Screen Share, Peer-to-Peer , PeerShare , PCShare, Screen Record">
+    <meta name="author" content="Its Narendran">
+
+    <!-- Viewport Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Favicon & Icons Start -->
+    <link rel="icon" href="./res/img/favicon.ico" sizes="any">
+    <link rel="icon" href="./res/img/nameico.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./res/img/apple-touch-icon.png">
+    <link rel="manifest" href="./res/img/site.webmanifest">
+    <!-- Template Favicon & Icons End -->
+
+    <!-- Template Styles Start -->
+    <link rel="stylesheet" type="text/css" href="./res/css/loader-mono.css">
+    <link rel="stylesheet" type="text/css" href="./res/css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="./res/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./res/css/color-mono.css">
+    <!-- Template Styles End -->
+
+    <!-- Custom Browser Color Start -->
+    <meta name="theme-color" content="#151515">
+    <meta name="msapplication-navbutton-color" content="#151515">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#151515">
+    <!-- Custom Browser Color End -->
+
+    <!-- Video element styles -->
+    <style>
+      video{width:100%;margin-bottom:20px}
+      #header > div { position:relative;text-align: center}
+      #header .buttons {float:none !important}
+      #header #nav a {color: #fff}
+      #header h1 {text-shadow:0 0 30px #000;margin:30px 0}
+      #header h4 {margin-top:60px}
+    </style>
+
+    <script>
+      window.q=[];window.$=function(f){q.push(f)}
+    </script>
+
+  </head>
+
+  <body>
+
+    <!-- Loader Start -->
+    <div class="loader">
+      <div class="loader__content">
+        <div class="loader__caption slideInUp">
+          <p class="loading-text">Loading</p>
+          <span class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Custom HTML Start -->
+
+    <!-- Main Section Start-->
+    <section id="main" class="section-main">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 fullheight">
+
+          <!-- Main Section Intro Start -->
+          <div id="intro" class="col-12 col-xl-9 section-main__intro">
+
+            <!-- Intro Media Start -->
+            <div class="intro__media">
+
+              <!-- Main Section Image Background Start -->
+              <div class="media__image media-mono-rec"></div>
+              <!-- Main Section Image Background End -->
+
+              <!-- Main Section Color Layer Start -->
+              <div class="color-layer color-layer-medium"></div>
+              <!-- Main Section Color Layer End -->
+
+            </div>
+            <!-- Intro Media End -->
+
+            <!-- Intro Header Start -->
+            <div class="intro__header">
+
+              <!-- Logo Start -->
+              <div class="logo">
+                <a href="./index.html"><img src="./res/img/nameico.png" alt="PeerShare - Secure Screen Sharing"></a>
+              </div>
+              <!-- Logo End -->
+
+            </div>
+            <!-- Intro Header End -->
+
+            <!-- Intro Headline Start -->
+            <div class="intro__headline">
+              <!-- Animated Headline Start -->
+              <h1 class="headline__title clip">
+                <span>
+                  <b class="is-visible">Screen Record</b>
+                </span>
+              </h1>
+              <!-- Animated Headline End -->
+
+              <p class="headline__description">Capture everything worth sharing on your screen. You can record online webinars, courses, gameplay, presentation, video tutorials, and more with a few clicks.</p>
+              <div class="headline__btnholder">
+                <a href="#" class="button button-solid-light" id="notify-trigger">
+                  <span class="button-caption">Try Now</span>
+                </a>
+                <a href="./index.html" class="button button-solid-light back_but" >
+                  <span class="button-caption">Home</span>
+                </a>
+              </div>
+            </div>
+            <!-- Intro Headline End -->
+
+          </div>
+          <!-- Main Section Intro End -->
+
+          <!-- Main Section Aside Start -->
+          <div class="col-12 col-xl-3 section-main__aside">
+
+            <!-- Aside Content Start -->
+            <div class="aside__content">
+              <p class="aside__title">PeerShare - Secure Screen Recorder</p>
+              <p class="aside__text"><b>Step 1 - capture your screen</b> with (or without) a voiceover</p>
+              <p class="aside__text"><b>Step 2 - one-click share the recording</b> with a co-worker, friend or a family member</p>
+              <p class="aside__text">No plugins, no extensions, no 3rd party software required, just a modern browser</p>
+
+            </div>
+            <!-- Aside Content End -->
+
+          </div>
+          <!-- Main Section Aside End -->
+
+        </div>
+      </div>
+    </section>
+    <!-- Main Section End -->
+
+    <!-- Notify Section Start -->
+    <div id="notify" class="notify">
+      <div class="container-fluid p-0 fullheight">
+        <div class="row g-0 fullheight">
+          <div class="col-12">
+
+            <!-- Notify Content Start -->
+            <div class="notify__content">
+            
+
+              <!-- Notify Content Block Title Start -->
+              <div class="content-block margin-bottom-s">
+                <p class="popup__title light transition-el transition-el-1">PeerShare - Secure Screen Recording</p>
+                <p class="popup__subtitle light transition-el transition-el-2">This is a free, very simple browser-based online screen recorder. You can download your recording directly.</p><br />
+                <video id="localVideo" playsinline autoplay muted style="display:none"></video>  
+                <p id="statusMsg" style="text-align:center;display:none;" class="popup__subtitle light transition-el transition-el-2"></p>
+              </div>
+              <!-- Notify Content Block Title End -->
+
+              <!-- Notify Content Block Form Start -->
+              <div class="content-block grid-block">
+                <div class="form-container">
+
+                  <!-- Notify Form Start -->
+                  <form class="form form-light notify-form" id="notify-form" action="javascript:;">
+                    <div class="container-fluid px-4">
+                      <div class="row gx-5">
+                        <div class="col-3">
+                          <button id="startButton" class="button button-solid-light transition-el transition-el-4" type="submit">
+                            <span class="button-caption">Record</span>
+                          </button>
+                        </div>
+                        <div class="col-3">
+                          <a href="./rec.html" class="button button-solid-light transition-el transition-el-4 cls_but"  type="submit">Back</a>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- Notify Form End -->
+
+                </div>
+
+                <div style="display:none" id="modalDialog">
+                  <video id='vidCapture' style='width:770px;height:420px;background:#222' playsinline autoplay loop muted controls></video><br>
+                  <span class='buttons'>
+                    <a id='btnDownloadCapture' target="_blank" href='javascript:;' download="video.webm" style='display:none' class="button button-solid-light transition-el transition-el-4" >Download</a>
+                    <a id='btnStopCapture' class="button button-solid-light transition-el transition-el-4" href='javascript:;' style='display:none'>Stop recording</a>
+                    <a id='btnCancelCapture'  class="button button-solid-light transition-el transition-el-4" href='javascript:;' style='display:none' >Discard</a>
+                    <img id="indicatorImg" src="img/indicator.svg" style="display:none" />
+                  </span>
+                </div>
+                
+              </div>
+              <!-- Notify Content Block Form End -->
+
+            </div>
+            <!-- Notify Content End -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Notify Section End -->
+
+    <!-- Custom HTML End -->
+
+
+    <!-- Load Scripts Start -->
+    <script src="./res/js/rec/core.js" defer></script>
+    <script src="./res/js/libs.min.js"></script>
+    <script src="./res/js/custom.js"></script>
+    <script src="./res/js/jquery.min.js" defer onload="setTimeout(function(){$.each(q, function (i,f) { $(f) });}, 500)"></script>
+    <script src="./res/js/lazyload.min.js" defer onload="var lzl=new LazyLoad({elements_selector:'.lazyimg',threshold:300,data_src:'original'});"></script>
+    <script src="./res/js/jquery.simplemodal.min.js" defer></script>
+    <!-- Load Scripts End -->
+
+  </body>
+
+
+</html>
