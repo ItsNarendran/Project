@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">	
+
+<meta charset="utf-8">
+<head>
+	<title>Peer Share</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">		
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">			
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<link rel="icon" href="img/favicon.ico" />
+</head>
+<body>
+      <div class="container">
+        <h1> PeerShare </h1>
+        <div class="card">
+          <h2>Share</h2>
+          <p>Screen Share.</p>
+          <div class="pic"></div>
+          <button onclick="shr()">
+          </button>
+        </div>
+        <div class="card card2">
+          <h2>Record</h2>
+          <p>Screen Record.</p>
+          <div class="pic"></div>
+          <button onclick="rec()">
+          </button>
+        </div>
+      </div>
+    <script>
+     function shr(){
+      window.open("Share/index.html")
+    }
+    function rec(){
+      window.open("Capture/index.html")
+    }
+    </script>
+    </body>
+</html>
