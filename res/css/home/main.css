@@ -436,7 +436,7 @@ p.light {
   background-repeat: repeat;
   background-position: top;
   -moz-background-size: cover;
-       background-size: cover;
+       background-size: contain;
 }
 
 .intro__header {
